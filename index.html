@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Infrastructure Competitive Intelligence Monitor</title>
+  <meta name="description" content="An AI-assisted competitive intelligence workflow for synthesizing public infrastructure signals into strategic insight across Meta, Microsoft, Google, Amazon, Oracle, CoreWeave, xAI, Anthropic, and Nvidia." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="container nav-inner">
+      <a href="#" class="nav-brand">
+        <div class="nav-brand-icon">⬡</div>
+        AI Infra Monitor
+      </a>
+      <ul class="nav-links">
+        <li><a href="#executive-summary">Executive Summary</a></li>
+        <li><a href="#companies">Companies</a></li>
+        <li><a href="#signals">Signal Feed</a></li>
+        <li><a href="#implications">Implications</a></li>
+        <li><a href="#methodology">Methodology</a></li>
+      </ul>
+      <span class="nav-badge">Prototype · Public Signals Only</span>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero" id="top">
+    <div class="container hero-content">
+      <div class="hero-eyebrow">Live Prototype · AI Infrastructure Intelligence</div>
+      <h1 class="hero-title">
+        AI Infrastructure<br>
+        <span>Competitive Intelligence</span><br>
+        Monitor
+      </h1>
+      <p class="hero-subtitle">
+        Tracking how compute, energy, and infrastructure are shaping the AI competition across the world's most strategically significant technology companies.
+      </p>
+      <div class="hero-description">
+        This prototype monitors public signals across company announcements, news, filings, and infrastructure partnerships to generate an executive-ready view of the AI infrastructure race. All data is sourced from publicly available information and manually curated signals.
+      </div>
+      <div class="hero-stats" id="hero-stats">
+        <!-- Populated by script.js -->
+      </div>
+    </div>
+  </header>
+
+  <!-- Executive Summary -->
+  <section id="executive-summary">
+    <div class="container">
+      <div class="section-label">Executive Summary</div>
+      <h2 class="section-title">Four Strategic Dynamics Shaping the Race</h2>
+      <p class="section-subtitle">
+        Public signals from company announcements, earnings calls, and infrastructure partnerships point to four dominant forces structuring competitive position in the AI era.
+      </p>
+      <div class="insight-grid" id="insight-grid">
+        <!-- Populated by script.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Company Comparison -->
+  <section id="companies">
+    <div class="container">
+      <div class="section-label">Company Intelligence</div>
+      <h2 class="section-title">Competitive Landscape</h2>
+      <p class="section-subtitle">
+        Click any card to expand the full strategic brief — including thesis, risks, and what to monitor next.
+      </p>
+      <div class="company-grid" id="company-grid">
+        <!-- Populated by script.js -->
+      </div>
+      <!-- Company Detail Panel -->
+      <div class="detail-panel" id="detail-panel" role="region" aria-live="polite">
+        <!-- Populated by script.js on card click -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Signal Feed -->
+  <section id="signals">
+    <div class="container">
+      <div class="section-label">Signal Feed</div>
+      <h2 class="section-title">Public Infrastructure Signals</h2>
+      <p class="section-subtitle">
+        Manually curated signals sourced from public announcements, filings, and news. Add new entries directly to <code>data/signals.json</code>.
+      </p>
+
+      <!-- Filters -->
+      <div class="filters-bar" role="search" aria-label="Signal filters">
+        <div class="filters-row">
+          <div class="filter-group">
+            <label class="filter-label" for="filter-company">Company</label>
+            <select class="filter-select" id="filter-company">
+              <option value="">All Companies</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label class="filter-label" for="filter-category">Signal Category</label>
+            <select class="filter-select" id="filter-category">
+              <option value="">All Categories</option>
+              <option value="Compute">Compute</option>
+              <option value="Energy">Energy</option>
+              <option value="Data Center">Data Center</option>
+              <option value="Chips">Chips</option>
+              <option value="Cloud">Cloud</option>
+              <option value="Capex">Capex</option>
+              <option value="Geography">Geography</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label class="filter-label" for="filter-source">Source Type</label>
+            <select class="filter-select" id="filter-source">
+              <option value="">All Sources</option>
+              <option value="News">News</option>
+              <option value="Company Announcement">Company Announcement</option>
+              <option value="Filing">Filing</option>
+              <option value="Partnership">Partnership</option>
+              <option value="Earnings Call">Earnings Call</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label class="filter-label" for="filter-score">Min Signal Score</label>
+            <select class="filter-select" id="filter-score">
+              <option value="0">Any Score</option>
+              <option value="3">3+ (Moderate)</option>
+              <option value="4">4+ (High)</option>
+              <option value="5">5 (Critical)</option>
+            </select>
+          </div>
+          <label class="filter-toggle" id="filter-energy-toggle">
+            <input type="checkbox" id="filter-energy" />
+            ⚡ Energy Only
+          </label>
+          <div class="filters-actions">
+            <button class="btn-reset" id="btn-reset-filters">Reset</button>
+          </div>
+        </div>
+      </div>
+
+      <p class="signals-count" id="signals-count"></p>
+
+      <div class="signal-list" id="signal-list" role="list">
+        <!-- Populated by script.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Meta Implications -->
+  <section id="implications">
+    <div class="container">
+      <div class="section-label">Strategic Implications</div>
+      <h2 class="section-title">What This Means for Meta</h2>
+      <p class="section-subtitle">
+        Infrastructure signals have direct consequences for Meta's competitive position, AI product velocity, and long-term cost structure.
+      </p>
+      <div class="implications-grid" id="implications-grid">
+        <!-- Populated by script.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Methodology -->
+  <section id="methodology">
+    <div class="container">
+      <div class="section-label">Methodology</div>
+      <h2 class="section-title">How This Monitor Works</h2>
+      <p class="section-subtitle">
+        A four-step framework for converting public infrastructure signals into actionable competitive intelligence.
+      </p>
+      <div class="methodology-steps" id="methodology-steps">
+        <!-- Populated by script.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <div class="footer-brand">AI Infrastructure Competitive Intelligence Monitor</div>
+          <div class="footer-meta">
+            An AI-assisted competitive intelligence prototype · Built for strategic analysis and portfolio demonstration
+          </div>
+          <div class="footer-disclaimer">
+            All data sourced from publicly available information. This is a prototype tool using manually curated public signals — not a production-grade database. No proprietary, non-public, or confidential information is used or implied.
+          </div>
+        </div>
+        <div style="text-align: right;">
+          <div style="font-size: 12px; color: #334155;">Last data refresh</div>
+          <div style="font-size: 14px; font-weight: 600; color: #64748b;" id="footer-date"></div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
